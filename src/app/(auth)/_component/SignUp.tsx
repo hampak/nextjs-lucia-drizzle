@@ -48,7 +48,7 @@ export const SignUp = () => {
 
   return (
     <div className="w-[500px] border border-black/20 shadow-lg rounded-lg p-4">
-      <h1 className="text-xl font-bold text-center mt-1">Reigster</h1>
+      <h1 className="text-xl font-bold text-center mt-1">Register</h1>
       <h2 className="text-sm font-semibold text-center mt-2 text-gray-500">Hello :D</h2>
       <div className="mt-5">
         <Form {...form}>

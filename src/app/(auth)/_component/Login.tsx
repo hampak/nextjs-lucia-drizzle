@@ -1,18 +1,20 @@
 "use client"
 
-import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
-import { useForm } from "react-hook-form";
-
-import { Input } from "@/components/ui/input";
-import { LoginUserSchema } from "@/schema";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { useTransition } from "react";
-import { z } from "zod";
-import { Button } from "@/components/ui/button";
-import { Loader2Icon } from "lucide-react";
 import Link from "next/link";
+
 import { signIn } from "@/actions/authentication/sign-in";
 
+import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+
+import { LoginUserSchema } from "@/schema";
+
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { Loader2Icon } from "lucide-react";
 
 export const Login = () => {
 
@@ -27,8 +29,11 @@ export const Login = () => {
   })
 
   const onSubmit = (values: z.infer<typeof LoginUserSchema>) => {
+
+    const { password, username } = values
+
     startTransition(() => {
-      signIn()
+      signIn(username, password)
         .then((result) => {
           // add logic for error and success cases
         })

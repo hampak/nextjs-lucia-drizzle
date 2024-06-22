@@ -28,4 +28,6 @@ interface DatabaseUserAttributes {
   username: string;
 }
 
-export { db, lucia }
+export {
+  lucia
+}

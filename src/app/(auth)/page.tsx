@@ -1,6 +1,6 @@
+import { redirect } from "next/navigation";
 import { validateRequest } from "@/lib/validate-request";
 import Login from "./_component/Login";
-import { redirect } from "next/navigation";
 
 export default async function Home() {
 
