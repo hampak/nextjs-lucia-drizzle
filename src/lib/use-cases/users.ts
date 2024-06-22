@@ -36,7 +36,7 @@ export async function registerUserUseCase(username: string, password: string) {
   // if there isn't an existing user, create new one
   const salt = crypto.randomBytes(128).toString("base64")
   const hash = await hashPassword(password, salt)
-  const user = await db
+  const [user] = await db
     .insert(userTable)
     .values({
       hashedPassword: hash,
@@ -46,7 +46,7 @@ export async function registerUserUseCase(username: string, password: string) {
     })
     .returning()
 
-  return user[0]
+  return user
 }
 
 // ----------------------------------------------------------------------
