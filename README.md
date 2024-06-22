@@ -9,6 +9,10 @@ There are more features to be added such as...
 
 You can progressively add new features (such as the ones above).
 
-## Considerations
+## Steps
 
-- you must add the `DATABASE_URL` value in your `.env` file
+- download and run `npm i`
+- create `.env` file
+- add the `DATABASE_URL` value in your `.env` file
+- run `npm run dev`
+- try creating new user
