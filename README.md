@@ -17,4 +17,4 @@ You can progressively add new features (such as the ones above).
 - run `npm run dev`
 - try creating new user
 
-**You can also run `npx drizzle-kit studio` to check the data being stored in your db
+**You can also run `npx drizzle-kit studio` to check the data being stored in your db**
