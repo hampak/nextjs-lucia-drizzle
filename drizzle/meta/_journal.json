@@ -8,6 +8,13 @@
       "when": 1719034845656,
       "tag": "0000_long_moondragon",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1719041162175,
+      "tag": "0001_ambitious_kronos",
+      "breakpoints": true
     }
   ]
 }
